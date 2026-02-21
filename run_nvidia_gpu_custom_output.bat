@@ -22,6 +22,10 @@ echo.
 
 set /p "OUTPUT_DIR=Output directory path: "
 
+REM Normalize user input to avoid trailing backslash escaping the closing quote
+set "OUTPUT_DIR=%OUTPUT_DIR:"=%"
+if "!OUTPUT_DIR:~-1!"=="\" set "OUTPUT_DIR=!OUTPUT_DIR:~0,-1!"
+
 REM Get current date in YYYY-MM-DD format
 for /f "tokens=2 delims==" %%I in ('wmic os get localdatetime /value') do if not "%%I"=="" set datetime=%%I
 set "DATE_FOLDER=%datetime:~0,4%-%datetime:~4,2%-%datetime:~6,2%"

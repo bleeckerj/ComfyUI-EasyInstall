@@ -40,10 +40,12 @@ echo This is where ComfyUI will save generated images and models.
 echo A date folder (%DATE_FOLDER%) will be automatically appended to the path.
 set /p "OUTPUT_DIR=Enter output directory path (or press Enter to use default): "
 if not "%OUTPUT_DIR%"=="" (
+    set "OUTPUT_DIR=%OUTPUT_DIR:"=%"
+    if "!OUTPUT_DIR:~-1!"=="\" set "OUTPUT_DIR=!OUTPUT_DIR:~0,-1!"
     set "FULL_OUTPUT_DIR=%OUTPUT_DIR%\%DATE_FOLDER%"
-    set "OUTPUT_ARGS=--output-directory "!FULL_OUTPUT_DIR!""
+    set "OUTPUT_ARGS=--output-directory ""!FULL_OUTPUT_DIR!"""
 ) else (
-    set "OUTPUT_ARGS=--output-directory "%DATE_FOLDER%""
+    set "OUTPUT_ARGS=--output-directory ""%DATE_FOLDER%"""
 )
 echo.
 

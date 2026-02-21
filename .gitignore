@@ -1,0 +1,8 @@
+# Embedded Python runtime — large, installed/managed externally
+python_embeded/
+
+# ComfyUI is its own upstream git repo (submodule or separate clone)
+ComfyUI/
+
+# Update scripts managed by upstream Easy-Install
+update/
