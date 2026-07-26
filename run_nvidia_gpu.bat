@@ -1,4 +1,4 @@
-@Echo off&&cd /D %~dp0
+`p@Echo off&&cd /D %~dp0
 Title ComfyUI-Easy-Install
-.\python_embeded\python.exe -I ComfyUI\main.py --windows-standalone-build
+.\python_embeded\python.exe -I ComfyUI\main.py --windows-standalone-build --listen 0.0.0.0
 pause

@@ -55,7 +55,7 @@ if not exist "..\Start ComfyUI SageAttention.bat" (
 	echo %green%::::::::::::::: Creating%yellow% Start ComfyUI SageAttention.bat%reset%
 	echo @Echo off^&^&cd /D %%^~dp0> "..\Start ComfyUI SageAttention.bat"
 	echo Title ComfyUI-Easy-Install with SageAttention>> "..\Start ComfyUI SageAttention.bat"
-	echo .\python_embeded\python.exe -I -W ignore::FutureWarning ComfyUI\main.py --windows-standalone-build --use-sage-attention>> "..\Start ComfyUI SageAttention.bat"
+	echo .\python_embeded\python.exe -I -W ignore::FutureWarning ComfyUI\main.py --windows-standalone-build --use-sage-attention --listen 0.0.0.0>> "..\Start ComfyUI SageAttention.bat"
 	echo pause>> "..\Start ComfyUI SageAttention.bat"
 )
 

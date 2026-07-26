@@ -1,6 +1,6 @@
 @Echo off&&cd /D %~dp0
 Title ComfyUI-Easy-Install
-.\python_embeded\python.exe -I -W ignore::FutureWarning ComfyUI\main.py --windows-standalone-build --date-based-output
+.\python_embeded\python.exe -I -W ignore::FutureWarning ComfyUI\main.py --windows-standalone-build --date-based-output --listen 0.0.0.0
 
 echo.
 echo If you see this and ComfyUI did not start, [92mtry updating your Nvidia drivers.[0m

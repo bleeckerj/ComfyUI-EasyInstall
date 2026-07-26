@@ -24,7 +24,7 @@ REM Set default values
 set "OUTPUT_DIR="
 set "INPUT_DIR="
 set "TEMP_DIR="
-set "LISTEN_IP=127.0.0.1"
+set "LISTEN_IP=0.0.0.0"
 set "PORT=8188"
 set "VERBOSE_LEVEL=INFO"
 set "EXTRA_ARGS="
@@ -73,10 +73,10 @@ echo.
 
 REM Prompt for network settings
 echo [4/8] Network Configuration
-echo Default listen IP: 127.0.0.1 (localhost only)
+echo Default listen IP: 0.0.0.0 (local network access)
 echo Use 0.0.0.0 to allow external connections (less secure)
 set /p "LISTEN_IP=Enter listen IP address (or press Enter for default): "
-if "%LISTEN_IP%"=="" set "LISTEN_IP=127.0.0.1"
+if "%LISTEN_IP%"=="" set "LISTEN_IP=0.0.0.0"
 
 set /p "PORT=Enter port number (default 8188): "
 if "%PORT%"=="" set "PORT=8188"

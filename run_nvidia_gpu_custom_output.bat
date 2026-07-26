@@ -37,12 +37,12 @@ if not "%OUTPUT_DIR%"=="" (
     echo.
     echo Using output directory: !FULL_OUTPUT_DIR!
     echo Starting ComfyUI...
-    .\python_embeded\python.exe -I ComfyUI\main.py --windows-standalone-build --output-directory "!FULL_OUTPUT_DIR!"
+    .\python_embeded\python.exe -I ComfyUI\main.py --windows-standalone-build --output-directory "!FULL_OUTPUT_DIR!" --listen 0.0.0.0
 ) else (
     echo.
     echo Using default output directory with date folder: %DATE_FOLDER%
     echo Starting ComfyUI...
-    .\python_embeded\python.exe -I ComfyUI\main.py --windows-standalone-build --output-directory "%DATE_FOLDER%"
+    .\python_embeded\python.exe -I ComfyUI\main.py --windows-standalone-build --output-directory "%DATE_FOLDER%" --listen 0.0.0.0
 )
 
 echo.

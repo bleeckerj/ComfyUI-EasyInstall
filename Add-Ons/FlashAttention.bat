@@ -56,7 +56,7 @@ echo.
 if not exist "..\Start ComfyUI FlashAttention.bat" (
 	echo @Echo off^&^&cd /D %%^~dp0> "..\Start ComfyUI FlashAttention.bat"
 	echo Title ComfyUI-Easy-Install>> "..\Start ComfyUI FlashAttention.bat"
-	echo .\python_embeded\python.exe -I -W ignore::FutureWarning ComfyUI\main.py --windows-standalone-build --use-flash-attention>> "..\Start ComfyUI FlashAttention.bat"
+	echo .\python_embeded\python.exe -I -W ignore::FutureWarning ComfyUI\main.py --windows-standalone-build --use-flash-attention --listen 0.0.0.0>> "..\Start ComfyUI FlashAttention.bat"
 	echo pause>> "..\Start ComfyUI FlashAttention.bat"
 )
 
